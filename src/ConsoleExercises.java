@@ -1,6 +1,8 @@
 
 import java.util.Scanner;
 
+import static java.lang.Integer.parseInt;
+
 public class ConsoleExercises {
 
     public static void main(String[] args) {
@@ -37,7 +39,13 @@ public class ConsoleExercises {
     //============ Calculate the perimeter and area of Codeup's classrooms =================|
         //=========== #1 ============================
             System.out.print("Enter the length of class room:");
-            String lengthAndWidth = scanner.nextLine();
+            String length = scanner.nextLine();
+            System.out.println("enter Width");
+            String width = scanner.nextLine();
+            int lengthAndWidth = parseInt(length) + parseInt(width);
+
+            System.out.println("the area of rectangle is: ");
+            
 
 
             System.out.printf("You Entered: %s ", lengthAndWidth);
