@@ -66,21 +66,23 @@ public class ControlFlowExercises {
 //
 //}
 
-//=================== #3 ================================|
-        Scanner scanner = new Scanner(System.in);
+//=================== #3 ===========================================================|
+//        Scanner scanner = new Scanner(System.in);
+//
+//        System.out.println("What number would you like to go up to?");
+//        int userInput = scanner.nextInt();
+//
+//        System.out.println("Here is your table!");
+//        System.out.println("number | squared | cubed");
+//        System.out.println("------ | ------  | ------");
+//
+//        for(int i = 1; i <= userInput; i++){
+//            int squared = i * i;
+//            int cubed = i * i * i;
+//            System.out.printf("%d      | %d       | %d \n" , i, squared, cubed);
+//        }
 
-        System.out.println("What number would you like to go up to?");
-        int userInput = scanner.nextInt();
-
-        System.out.println("Here is your table!");
-        System.out.println("number | squared | cubed");
-        System.out.println("------ | ------  | ------");
-
-        for(int i = 1; i <= userInput; i++){
-            int squared = i * i;
-            int cubed = i * i * i;
-            System.out.printf("%d      | %d       | %d \n" , i, squared, cubed);
-        }
+//=================== #4 ===============================================================|
 
     }
 }
