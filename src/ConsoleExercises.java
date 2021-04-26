@@ -45,7 +45,7 @@ public class ConsoleExercises {
             int lengthAndWidth = parseInt(length) + parseInt(width);
 
             System.out.println("the area of rectangle is: ");
-            
+
 
 
             System.out.printf("You Entered: %s ", lengthAndWidth);
