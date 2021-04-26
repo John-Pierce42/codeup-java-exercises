@@ -72,10 +72,15 @@ public class ControlFlowExercises {
         System.out.println("What number would you like to go up to?");
         int userInput = scanner.nextInt();
 
+        System.out.println("Here is your table!");
+        System.out.println("number | squared | cubed");
+        System.out.println("------ | ------  | ------");
 
-//        for(int i = 0; i < userInput; i++){
-//
-//        }
-        System.out.println("Here is your table!\n number  |\n ------  |\n" + i);
+        for(int i = 1; i <= userInput; i++){
+            int squared = i * i;
+            int cubed = i * i * i;
+            System.out.printf("%d      | %d       | %d \n" , i, squared, cubed);
+        }
+
     }
 }
