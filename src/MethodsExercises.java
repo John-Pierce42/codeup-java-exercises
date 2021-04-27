@@ -8,7 +8,9 @@ public class MethodsExercises {
 
         multiplication(2, 5);
 
-        division(25,5);
+        division(25, 5);
+
+        System.out.println(modulus(10,3));
 
     }
 
@@ -27,6 +29,13 @@ public class MethodsExercises {
 
     public static void division(int num1, int num2){
         System.out.println(num1 / num2);
+
+    }
+
+    public static int modulus(int num1, int num2){
+         return num1 % num2;
+
+
 
     }
 
