@@ -85,11 +85,12 @@ public class ControlFlowExercises {
 //=================== #4 ===============================================================|
 
         boolean user = false;
-
+        System.out.println(" A: 100-88\n B: 87-80\n C: 79-67\n D: 66-60\n F: 59-0");
         do {
             System.out.println("Choose grade from 0 - 100.");
-            System.out.println(" A: 100-88\n B: 87-80\n C: 79-67\n D: 66-60\n F: 59-0");
+
             String userInput = scanner.nextLine();
+
             if(userInput.equalsIgnoreCase("yes")){
                 System.out.println("ENTER grade here: ");
                 int grade = scanner.nextInt();
@@ -109,9 +110,6 @@ public class ControlFlowExercises {
                 System.out.println("Sorry you have to choose...");
                 user = true;
             }
-
-
-
 
         }while(user);
     }
