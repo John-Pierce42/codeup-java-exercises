@@ -16,8 +16,10 @@ public class MethodsExercises {
 
 //     #2
 
-        Scanner scanner = new Scanner(System.in);
 
+
+
+        getInteger(1,10);
 
     }
 
@@ -46,13 +48,20 @@ public class MethodsExercises {
 //    #2
 
 
-    public static int getInteger(int min, int max) {
-            if(min <= 0){
-                System.out.print("Enter a number between 1 and 10: ");
-            } else if(max >= 10){
-                System.out.print("Enter a number between 1 and 10: ");
-            }
-    }
+
+        public static int getInteger(int min, int max) {
+            Scanner scanner = new Scanner(System.in);
+            System.out.printf("Enter a number between %d and %d.\n", min, max);
+            int userInput = scanner.nextInt();
+
+         if (userInput > min && userInput < max) {
+             System.out.println("Right number.");
+             return userInput;
+         }  else {
+             System.out.println("Wrong number. ");
+             return getInteger(min,max);
+         }
 
 
+     }
 }
