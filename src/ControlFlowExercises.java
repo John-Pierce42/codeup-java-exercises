@@ -84,33 +84,36 @@ public class ControlFlowExercises {
 
 //=================== #4 ===============================================================|
 
-        boolean user = false;
+        boolean willContinue = false;
         System.out.println(" A: 100-88\n B: 87-80\n C: 79-67\n D: 66-60\n F: 59-0");
         do {
             System.out.println("Choose grade from 0 - 100.");
 
+//
+            int grade = scanner.nextInt();
+
+            if (grade >= 88) {
+                System.out.println("The grade you chose is: A");
+            } else if (grade >= 80) {
+                System.out.println("The grade you chose is: B");
+            } else if (grade >= 67) {
+                System.out.println("The grade you chose is: C");
+            } else if (grade >= 60) {
+                System.out.println("The grade you chose is: D");
+            } else if (grade >= 0) {
+                System.out.println("The grade you chose is: F");
+            }
+            System.out.println("Would you like to enter another grade? [yes/no]");
             String userInput = scanner.nextLine();
+             userInput = scanner.nextLine();
 
             if(userInput.equalsIgnoreCase("yes")){
-                System.out.println("ENTER grade here: ");
-                int grade = scanner.nextInt();
-                user = false;
-                if (grade >= 88) {
-                    System.out.println("The grade you chose is: A");
-                } else if (grade >= 80) {
-                    System.out.println("The grade you chose is: B");
-                } else if (grade >= 67) {
-                    System.out.println("The grade you chose is: C");
-                } else if (grade >= 60) {
-                    System.out.println("The grade you chose is: D");
-                } else if (grade >= 0) {
-                    System.out.println("The grade you chose is: F");
-                }
+                willContinue = true;
             } else {
-                System.out.println("Sorry you have to choose...");
-                user = true;
+                System.out.println("Ok have nice day.");
+                willContinue = false;
             }
 
-        }while(user);
+        }while(willContinue);
     }
 }
