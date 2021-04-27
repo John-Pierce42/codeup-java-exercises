@@ -67,7 +67,7 @@ public class ControlFlowExercises {
 //}
 
 //=================== #3 ===========================================================|
-//        Scanner scanner = new Scanner(System.in);
+        Scanner scanner = new Scanner(System.in);
 //
 //        System.out.println("What number would you like to go up to?");
 //        int userInput = scanner.nextInt();
@@ -84,5 +84,35 @@ public class ControlFlowExercises {
 
 //=================== #4 ===============================================================|
 
+        boolean user = false;
+
+        do {
+            System.out.println("Choose grade from 0 - 100.");
+            System.out.println(" A: 100-88\n B: 87-80\n C: 79-67\n D: 66-60\n F: 59-0");
+            String userInput = scanner.nextLine();
+            if(userInput.equalsIgnoreCase("yes")){
+                System.out.println("ENTER grade here: ");
+                int grade = scanner.nextInt();
+                user = false;
+                if (grade >= 88) {
+                    System.out.println("The grade you chose is: A");
+                } else if (grade >= 80) {
+                    System.out.println("The grade you chose is: B");
+                } else if (grade >= 67) {
+                    System.out.println("The grade you chose is: C");
+                } else if (grade >= 60) {
+                    System.out.println("The grade you chose is: D");
+                } else if (grade >= 0) {
+                    System.out.println("The grade you chose is: F");
+                }
+            } else {
+                System.out.println("Sorry you have to choose...");
+                user = true;
+            }
+
+
+
+
+        }while(user);
     }
 }
