@@ -1,28 +1,31 @@
+import javax.lang.model.SourceVersion;
 import java.util.Scanner;
 
 public class MethodsExercises {
 
     public static void main(String[] args) {
 
-        addition(10, 10);
+//        addition(10, 10);
+//
+//        System.out.println(subtraction(20, 5));
+//
+//        multiplication(2, 5);
+//
+//        division(25, 5);
+//
+//        System.out.println(modulus(10, 3));
 
-        System.out.println(subtraction(20, 5));
+//    #2
 
-        multiplication(2, 5);
+//        getInteger(1,10);
 
-        division(25, 5);
+//    #3
 
-        System.out.println(modulus(10, 3));
-
-//     #2
-
-
-
-
-        getInteger(1,10);
+        factorial();
+        System.out.println(factorial(4));
 
     }
-
+//=================================== Methods =========================================|
     public static void addition(int num1, int num2) {
         System.out.println(num1 + num2);
     }
@@ -49,19 +52,39 @@ public class MethodsExercises {
 
 
 
-        public static int getInteger(int min, int max) {
-            Scanner scanner = new Scanner(System.in);
-            System.out.printf("Enter a number between %d and %d.\n", min, max);
-            int userInput = scanner.nextInt();
+//        public static int getInteger(int min, int max) {
+//            Scanner scanner = new Scanner(System.in);
+//            System.out.printf("Enter a number between %d and %d.\n", min, max);
+//            int userInput = scanner.nextInt();
+//
+//         if (userInput > min && userInput < max) {
+//             System.out.println("Right number.");
+//             return userInput;
+//         }  else {
+//             System.out.println("Wrong number. ");
+//             return getInteger(min,max);
+//         }
+//
+//    }
 
-         if (userInput > min && userInput < max) {
-             System.out.println("Right number.");
-             return userInput;
-         }  else {
-             System.out.println("Wrong number. ");
-             return getInteger(min,max);
-         }
+//    #3
+public static void factorial(){
+    Scanner scanner = new Scanner(System.in);
+    System.out.print("Enter integer from 1 to 10: ");
+    int userInput = scanner.nextInt();
+    int result = factorial(userInput);
+    System.out.println("The factorial of " + userInput + " is " + result);
+}
+
+    public static int factorial(int num) {
+        int result = 1;
+        for (int i = 1; i <= num; i++) {
+            result = result * i;
+        }
+        return result;
+    }
 
 
-     }
+
+
 }
