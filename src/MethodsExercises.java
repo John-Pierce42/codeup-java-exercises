@@ -89,22 +89,40 @@ public class MethodsExercises {
 
 //    #4
 
-    public static void diceRoll(){
+    public static void diceRoll() {
+        boolean playingDice;
         Scanner scanner = new Scanner(System.in);
-        int dice1 = (int) (Math.random() * 6 - 1 + 1) + 1;
-        int dice2 = (int) (Math.random() * 6 - 1 + 1) + 1;
-        int dice = dice1 + dice2;
+        do {
+            System.out.println("Enter the number of sides for a pair of dice");
+            int userSides = scanner.nextInt();
 
-        System.out.println("Enter the number of sides for a pair of dice");
-        int userInput = scanner.nextInt();
-        if(userInput == 4){
-            System.out.print("You rolled a  " + dice);
-        }
+            int dice1 = (int) (Math.random() * userSides - 1 + 1) + 1;
+            int dice2 = (int) (Math.random() * userSides - 1 + 1) + 1;
+            int dice = dice1 + dice2;
 
+            System.out.println("Would you like to roll the dice? Enter [yes/no]");
+            scanner.nextLine();
+            String userAnswer = scanner.nextLine();
+            if (userAnswer.equalsIgnoreCase("yes")) {
+                System.out.println("You rolled a  " + dice1 + " and " + dice2 + " for a total of " + dice + ".");
 
+            } else {
+                System.out.println("Ok nice day you will have.");
+                break;
+            }
+            System.out.println("Would you like to rew again?");
+            String userContinue = scanner.nextLine();
+            if(userContinue.equalsIgnoreCase("yes")){
+                System.out.println("Ok cool thanks for playing again!");
+                playingDice = true;
+            } else {
+                System.out.println("Ok nice day you will have.");
+                playingDice = false;
+            }
+
+        } while (playingDice);
 
     }
-
 
 
 }
