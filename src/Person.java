@@ -20,10 +20,9 @@ public class Person {
     }
 
     public static void main(String[] args) {
-
-
-
-        System.out.println();
+        Person john = new Person();
+        john.name = "John";
+        john.sayHello();
 
     }
 }
