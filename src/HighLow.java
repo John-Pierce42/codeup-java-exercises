@@ -6,7 +6,7 @@ public class HighLow {
         Scanner scanner = new Scanner(System.in);
 
         int gamePicks = (int) (Math.random() * 100);
-        System.out.println("The secret number is: " + gamePicks);
+//        System.out.println("The secret number is: " + gamePicks);
         System.out.println();
 
 
