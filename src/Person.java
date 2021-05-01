@@ -11,7 +11,8 @@ public class Person {
 
     public void setName(String name) {
         //TODO: change the name property to the passed value
-        this.name = name;
+
+        name = name;
     }
 
     public void sayHello() {
@@ -21,8 +22,13 @@ public class Person {
 
     public static void main(String[] args) {
         Person john = new Person();
-        john.name = "John";
+        john.name = "Johnny";
+//        System.out.println(john.getName());
+        john.setName("john");
         john.sayHello();
+
+
+
 
     }
 }
