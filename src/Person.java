@@ -3,6 +3,10 @@ public class Person {
 
     private String name;
 
+    public Person(String personName) {
+        name = personName;
+
+    }
 
     public String getName() {
         //TODO: return the person's name
@@ -14,7 +18,7 @@ public class Person {
     public void setName(String name) {
         //TODO: change the name property to the passed value
 
-        name = name;
+        this.name = name;
     }
 
     public void sayHello() {
@@ -25,17 +29,19 @@ public class Person {
 
 
     public static void main(String[] args) {
-//        Person john = new Person();
+        Person john = new Person("John");
 //        john.name = "Johnny";
-////        System.out.println(john.getName());
-//        john.setName("john");
+        System.out.println(john.getName());
+        john.setName("Johnny");
+        System.out.println(john.getName());
 //        john.sayHello();
 
-//        Person person1 = new Person("John");
-//        Person person2 = new Person("John");
-//        System.out.println(person1.getName().equals(person2.getName()));
-//        System.out.println(person1 == person2);
-//
+
+        Person person1 = new Person("John");
+        Person person2 = new Person("John");
+        System.out.println(person1.getName().equals(person2.getName()));
+        System.out.println(person1 == person2);
+
 //        Person person1 = new Person("John");
 //        Person person2 = person1;
 //        System.out.println(person1 == person2);

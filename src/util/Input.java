@@ -4,20 +4,19 @@ import java.util.Scanner;
 
 public class Input {
 
-    private Scanner scanner;
+    private Scanner scanner = new Scanner(System.in);
 
 
-}
-
-    public String getString(){
+    public String getString() {
         return scanner.nextLine();
     }
 
-    boolean yesNo(){
-    if(getString().equalsIgnoreCase("y") || getString().equalsIgnoreCase("yes")){
-        return true;
-    } else {
-        return false;
-    }
+    boolean yesNo() {
+        if (getString().equalsIgnoreCase("y") || getString().equalsIgnoreCase("yes")) {
+            return true;
+        } else {
+            return false;
+        }
     }
 
+}
