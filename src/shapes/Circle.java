@@ -1,23 +1,23 @@
-package shapes;
-
-import util.Input;
-
-public class Circle {
-
-    private double radius;
-
-    public Circle(double radius){
-
-    }
-
-
-    public double getArea(){
-
-    }
-
-
-    public double getCircumference(){
-
-    }
-
-}
+//package shapes;
+//
+//import util.Input;
+//
+//public class Circle {
+//
+//    private double radius;
+//
+//    public Circle(double radius){
+//
+//    }
+//
+//
+//    public double getArea(){
+//
+//    }
+//
+//
+//    public double getCircumference(){
+//
+//    }
+//
+//}

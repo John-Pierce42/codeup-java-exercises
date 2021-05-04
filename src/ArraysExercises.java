@@ -9,13 +9,19 @@ public class ArraysExercises {
 //        System.out.println(Arrays.toString(numbers));
 
 // ================= Person array ========================|
+
         String[] personArray = {"john", "gabby", "alexandra"};
         Person person1 = new Person("john");
-//        Person person2 = new Person("gabby");
-//        Person person3 = new Person("alexandra");
+        Person person2 = new Person("gabby");
+        Person person3 = new Person("alexandra");
+
+        Person[] people = {person1, person2, person3};
+
+
         System.out.println(person1.getName());
-        for(String per : personArray ){
-            System.out.println(per);
+
+        for(Person per : people ){
+            System.out.println(per.getName());
         }
 
 
