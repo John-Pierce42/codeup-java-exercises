@@ -9,11 +9,14 @@ public class ArraysExercises {
 //        System.out.println(Arrays.toString(numbers));
 
 // ================= Person array ========================|
-        Person[] personArray = new Person[3];
-        Person people1 = new Person("john");
-        Person people2 = new Person("gabby");
-        Person people3 = new Person("alexandra");
-        System.out.println(people[1]);
+        String[] personArray = {"john", "gabby", "alexandra"};
+        Person person1 = new Person("john");
+//        Person person2 = new Person("gabby");
+//        Person person3 = new Person("alexandra");
+        System.out.println(person1.getName());
+        for(String per : personArray ){
+            System.out.println(per);
+        }
 
 
     }
