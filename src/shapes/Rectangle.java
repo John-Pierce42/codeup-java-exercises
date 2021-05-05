@@ -10,17 +10,17 @@ public class Rectangle {
         this.width = widthNum;
     }
 
-    public Rectangle(int side) {
-        this.length = side;
-        this.width = side;
+//    public Rectangle(int side) {
+//        this.length = side;
+//        this.width = side;
+//    }
+
+    public  int getArea(){
+        return  length * width;
     }
 
-    public  int getArea(int area){
-        return area = length * width;
-    }
-
-    public int getPerimeter(int perimeter){
-        return perimeter = 2 * length + 2 * width;
+    public int getPerimeter(){
+        return  2 * length + 2 * width;
     }
 
 
