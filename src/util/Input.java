@@ -8,16 +8,20 @@ public class Input {
     private Scanner scanner;
 
     public Input(){
-        this.scanner= new Scanner(System.in);
+        this.scanner = new Scanner(System.in);
     }
 
     public  String getString() {
         return scanner.nextLine();
     }
 
+
     public boolean yesNo() {
-        if (getString().equals("y") || getString().equals("yes")) {
+        String userInput = getString();
+
+        if (userInput.equals("y") || userInput.equals("yes")) {
             return true;
+
         } else {
             return false;
         }
@@ -28,8 +32,6 @@ public class Input {
     }
 
     public int getInt(int min, int max) {
-
-
         int userInput = scanner.nextInt();
         if (userInput > min && userInput < max) {
             System.out.println("yes correct number");
@@ -43,11 +45,10 @@ public class Input {
     }
 
     public double getDouble() {
-        return scanner.nextInt();
+        return scanner.nextDouble();
     }
 
     public double getDouble(double min, double max) {
-
         double userInput = scanner.nextInt();
         if (userInput > min && userInput < max) {
             System.out.println("yes correct number");
