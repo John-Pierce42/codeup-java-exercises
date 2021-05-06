@@ -2,9 +2,11 @@ package movies;
 
 import util.Input;
 
+import java.util.Arrays;
+
 public class MoviesApplication {
 
-    public static void main(String[] args){
+    public static void main(String[] args) {
 
         System.out.println("what would you like to do?");
         System.out.println();
@@ -19,10 +21,38 @@ public class MoviesApplication {
         Input userChoice = new Input();
         int userInput = userChoice.getInt();
 
-        System.out.println(userInput);
+//        System.out.println(userInput);
         MoviesArray arr = new MoviesArray();
+//        System.out.println(arr.findAll().toString());
+//        Movie category = new Movie("name", userInput);
+
+        boolean askingUser;
+        do {
+            if (userInput == 0) {
+                System.out.println("exit");
+                askingUser = true;
+            } else if (userInput == 1) {
+                System.out.println(Arrays.toString(MoviesArray.findAll()));
+                askingUser = true;
+            } else if (userInput == 2) {
+                System.out.println(Arrays.toString(MoviesArray.findAll()));
+                askingUser = true;
+            } else if (userInput == 3) {
+                System.out.println(Arrays.toString(MoviesArray.findAll()));
+                askingUser = true;
+            } else if (userInput == 4) {
+                System.out.println(Arrays.toString(MoviesArray.findAll()));
+                askingUser = true;
+            } else if (userInput == 5) {
+                System.out.println(Arrays.toString(MoviesArray.findAll()));
+                askingUser =  true;
+            } else {
+                askingUser = false;
+            }
+
+
+        } while (askingUser);
 
 
     }
-
 }

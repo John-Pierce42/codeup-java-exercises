@@ -9,6 +9,9 @@ public class Movie {
         this.category = categories;
     }
 
+    public String getCategory(){
+        return category;
+    }
 
 
 }
