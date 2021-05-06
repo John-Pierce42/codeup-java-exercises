@@ -15,11 +15,12 @@ public class MoviesApplication {
         System.out.println("4 - view movies in the horror category");
         System.out.println("5 - view movies in the scifi category");
         System.out.println();
-
+        System.out.print("Enter your choice: ");
         Input userChoice = new Input();
         int userInput = userChoice.getInt();
-        System.out.println("Enter your choice" + userInput);
 
+        System.out.println(userInput);
+        MoviesArray arr = new MoviesArray();
 
 
     }
