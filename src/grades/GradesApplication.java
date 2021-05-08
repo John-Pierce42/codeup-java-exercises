@@ -5,7 +5,7 @@ import java.util.Scanner;
 
 public class GradesApplication {
 
-    public static void main(String[] args){
+    public static void main(String[] args) {
         HashMap<String, String> students = new HashMap<>();
 
         students.put("John", "John42");
@@ -33,19 +33,42 @@ public class GradesApplication {
         Kenyan.addGrade(70);
         Kenyan.addGrade(90);
         Kenyan.addGrade(100);
+//===================================================== #3 ===========================================|
+        Scanner scanner = new Scanner(System.in);
 
         System.out.println("welcome!");
         System.out.println();
         System.out.println("Here are the GitHub usernames of our students:");
         System.out.println();
-        System.out.print("|" + students.get("John") + "|" + " " + "|" + students.get("Nic") + "|" + " " + "|" + students.get("Shan") + "|" + " " + "|" + students.get("Kenyan") +"|");
+        System.out.println("|" + students.get("John") + "|" + " " + "|" + students.get("Nic") + "|" + " " + "|" + students.get("Shan") + "|" + " " + "|" + students.get("Kenyan") + "|");
+
+
+
         System.out.println();
 
-        Scanner scanner = new Scanner(System.in);
         System.out.println("What student would you like to see more information on?");
+        String userInput = scanner.nextLine();
 
+        if (userInput.equals("John42")) {
+            System.out.println("Name: John Pierce- GitHub Username: " + students.get("John"));
+            System.out.println("Current Average: " + John.getGradeAverage());
+        } else if (userInput.equals("Shan42")) {
+            System.out.println("Name: Shanshan Su - GitHub Username: " + students.get("Shan"));
+            System.out.println("Current Average: " + Shan.getGradeAverage());
+        } else if (userInput.equals("Nic42")) {
+            System.out.println("Name: Nicholas Martinez - GitHub Username: " + students.get("Nic"));
+            System.out.println("Current Average: " + Nic.getGradeAverage());
+        } else if (userInput.equals("Kenyan42")) {
+            System.out.println("Name: Kenyan Luce - GitHub Username: " + students.get("Kenyan"));
+            System.out.println("Current Average: " + Kenyan.getGradeAverage());
+        } else {
+            System.out.println("Sorry, no student found with the GitHub username of " + '"' + userInput + '"' + ".");
+        }
+
+        if(userInput.equalsIgnoreCase("no")){
+            System.out.println("Goodbye, and have a wonderful day!");
+        }
 
 
     }
-
 }
