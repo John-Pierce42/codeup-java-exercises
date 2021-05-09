@@ -24,30 +24,32 @@ public class MoviesApplication {
 //        System.out.println(userInput);
         MoviesArray arr = new MoviesArray();
 //        System.out.println(arr.findAll().toString());
-//        Movie category = new Movie("name", userInput);
-
-        boolean askingUser;
+//        for(Movie a : MoviesArray.findAll()){
+//            System.out.println(a);
+//        }
+        boolean askingUser = false;
         do {
             if (userInput == 0) {
                 System.out.println("exit");
-                askingUser = true;
+
             } else if (userInput == 1) {
-                System.out.println(Arrays.toString(MoviesArray.findAll()));
-                askingUser = true;
+                
+                System.out.println(MoviesArray.findAll());
+
             } else if (userInput == 2) {
                 System.out.println(Arrays.toString(MoviesArray.findAll()));
-                askingUser = true;
+
             } else if (userInput == 3) {
                 System.out.println(Arrays.toString(MoviesArray.findAll()));
-                askingUser = true;
+
             } else if (userInput == 4) {
                 System.out.println(Arrays.toString(MoviesArray.findAll()));
-                askingUser = true;
+
             } else if (userInput == 5) {
                 System.out.println(Arrays.toString(MoviesArray.findAll()));
-                askingUser =  true;
+
             } else {
-                askingUser = false;
+
             }
 
 
