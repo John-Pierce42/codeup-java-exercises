@@ -33,7 +33,7 @@ public class MoviesApplication {
                 System.out.println("exit");
 
             } else if (userInput == 1) {
-                
+
                 System.out.println(MoviesArray.findAll());
 
             } else if (userInput == 2) {
