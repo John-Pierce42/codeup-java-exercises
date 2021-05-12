@@ -16,39 +16,71 @@ public class MoviesApplication {
         System.out.println("3 - view movies in the drama category");
         System.out.println("4 - view movies in the horror category");
         System.out.println("5 - view movies in the scifi category");
+        System.out.println("6 - view movies in the musical category");
         System.out.println();
-        System.out.print("Enter your choice: ");
+//        System.out.print("Enter your choice: ");
         Input userChoice = new Input();
-        int userInput = userChoice.getInt();
+//        int userInput = userChoice.getInt();
 
 //        System.out.println(userInput);
-        MoviesArray arr = new MoviesArray();
-//        System.out.println(arr.findAll().toString());
-//        for(Movie a : MoviesArray.findAll()){
-//            System.out.println(a);
-//        }
-        boolean askingUser = false;
+//
+
+
+        Movie[] movies = MoviesArray.findAll();
+
+
+
+        boolean askingUser = true;
         do {
+            System.out.println();
+            System.out.print("Enter your choice: ");
+             int userInput = userChoice.getInt();
+            System.out.println();
+
             if (userInput == 0) {
                 System.out.println("exit");
+                askingUser = false;
 
             } else if (userInput == 1) {
+                for(Movie a : movies){
+                    System.out.println(a.getName() + " -- " + a.getCategory());
 
-                System.out.println(MoviesArray.findAll());
-
+                }
             } else if (userInput == 2) {
-                System.out.println(Arrays.toString(MoviesArray.findAll()));
+                for(Movie a : movies){
+                    if(a.getCategory().equals("animated")){
+                        System.out.println(a.getName() + " -- " + a.getCategory());
 
+                    }
+                }
             } else if (userInput == 3) {
-                System.out.println(Arrays.toString(MoviesArray.findAll()));
+                for(Movie a : movies){
+                    if(a.getCategory().equals("drama")){
+                        System.out.println(a.getName() + " -- " + a.getCategory());
+                    }
+                }
 
             } else if (userInput == 4) {
-                System.out.println(Arrays.toString(MoviesArray.findAll()));
+                for(Movie a : movies){
+                    if(a.getCategory().equals("horror")){
+                        System.out.println(a.getName() + " -- " + a.getCategory());
+                    }
+                }
 
             } else if (userInput == 5) {
-                System.out.println(Arrays.toString(MoviesArray.findAll()));
+                for (Movie a : movies) {
+                    if (a.getCategory().equals("scifi")) {
+                        System.out.println(a.getName() + " -- " + a.getCategory());
+                    }
+                }
 
-            } else {
+            }
+            else if (userInput == 6) {
+                for (Movie a : movies) {
+                    if (a.getCategory().equals("musical")) {
+                        System.out.println(a.getName() + " -- " + a.getCategory());
+                    }
+                }
 
             }
 
