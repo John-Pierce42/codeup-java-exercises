@@ -30,7 +30,7 @@ public class Input {
         userInput = this.getString();
         try {
             return Integer.valueOf(userInput);
-        } catch (NumberFormatException e){
+        } catch (NumberFormatException e) {
             System.out.println(userInput);
             return getInt();
         }
@@ -52,7 +52,7 @@ public class Input {
         userInput = this.getString();
         try {
             return Double.valueOf(userInput);
-        } catch (NumberFormatException e){
+        } catch (NumberFormatException e) {
             System.out.println(userInput);
             return getDouble();
         }
@@ -82,4 +82,5 @@ public class Input {
 //
 //    }
 
+    }
 }
