@@ -4,10 +4,7 @@ import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.List;
-import java.util.Scanner;
+import java.util.*;
 
 public class playground {
 
@@ -114,28 +111,51 @@ public class playground {
 //        }
 
 //      null exception
-        try{
-//            null try.
-            int[] num = null;
-            System.out.println(num[1]);
+//        try{
+////            null try.
+//            int[] num = null;
+//            System.out.println(num[1]);
+//
+////            out of bounds try
+////            int[]num = {1,2,3};
+////            System.out.println(num[3]);
+//
+////            just an Exception try
+////            int[]num = {1,2,3};
+////            System.out.println();
+//
+//        }catch (NullPointerException e){
+//            System.out.println("your array is null.");
+//
+//        }catch(ArrayIndexOutOfBoundsException e){
+//            System.out.println("you index is out of bounds.");
+//
+//        }catch (Exception e){
+//            System.out.println("something else went wrong.");
+//        }
 
-//            out of bounds try
-//            int[]num = {1,2,3};
-//            System.out.println(num[3]);
+//        ArrayList<String> name = new ArrayList<>();
+//
+//        name.add("John");
+//        name.add("Gabby");
+//        name.add("Alexandra");
+//
+//        System.out.println(name);
+//
+//        for(String names : name){
+//            System.out.println(names);
+//        }
 
-//            just an Exception try
-//            int[]num = {1,2,3};
-//            System.out.println();
+        HashMap<Integer, String> number = new HashMap<Integer, String>();
 
-        }catch (NullPointerException e){
-            System.out.println("your array is null.");
+        number.put(1, "one");
+        number.put(2, "two");
+        number.put(3, "three");
 
-        }catch(ArrayIndexOutOfBoundsException e){
-            System.out.println("you index is out of bounds.");
+        System.out.println(number.get(1));
+        System.out.println(number.get(2));
+        System.out.println(number.get(3));
 
-        }catch (Exception e){
-            System.out.println("something else went wrong.");
-        }
 
 
 
